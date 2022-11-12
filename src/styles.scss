@@ -1,0 +1,81 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.ColorPicker {
+  position: absolute;
+
+  flex-flow: row;
+
+  margin-top: 100%;
+  z-index: 2;
+  border: 1px solid black;
+  padding: 5px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  display: none;
+
+  > div {
+    &:not(:first-child) {
+      margin-left: 5px;
+    }
+  }
+}
+
+.enabled {
+  display: flex;
+  opacity: 1;
+}
+
+.Table {
+  display: flex;
+  flex-flow: column;
+
+  > div {
+    height: 200px;
+    width: 150px;
+    border: 1px solid black;
+  
+    padding: 5px;
+
+    &:last-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+.ColorPickerButton {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 100%;
+}
+
+.Buttons {
+  dispay: flex;
+  flex-flow: column;
+
+  > div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+
+    .Button {
+      position: relative;
+
+      height: 25px;
+      width: 25px;
+
+      border: 1px solid black;
+      border-radius: 100%;
+
+      cursor: pointer;
+    }
+  }
+}
